@@ -1,0 +1,7 @@
+  Diho          Counter of operations          Eps
+
+  0.826838               22                 0.000000
+
+  Secant        Counter of operations          Eps
+
+  0.826838                6                 0.000000

@@ -1,0 +1,23 @@
+!define BLANK ""
+D:\YandexDisk\Prog_for_Windows\Lectii\Second.obj : D:\YandexDisk\Prog_for_Wi&
+ndows\Lectii\Second.cpp .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\Lectii
+ *wpp386 Second.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -6r&
+ -bt=nt -fo=.obj -mf -xs -xr
+
+D:\YandexDisk\Prog_for_Windows\Lectii\Second.exe : D:\YandexDisk\Prog_for_Wi&
+ndows\Lectii\Second.obj .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\Lectii
+ @%write Second.lk1 FIL Second.obj
+ @%append Second.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Second.imp 
+ @%append Second.lk1 LIBR Second.imp
+!endif
+!ifneq BLANK ""
+ @%append Second.lk1 
+!endif
+ *wlink name Second d all sys nt op m op maxe=25 op q op symf @Second.lk1
+

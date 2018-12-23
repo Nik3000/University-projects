@@ -1,0 +1,4 @@
+﻿  №8.cpp
+c:\users\dulce\source\repos\№8\№8\№8.cpp(23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+c:\users\dulce\source\repos\№8\№8\№8.cpp(24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  №8.vcxproj -> C:\Users\dulce\source\repos\№8\Debug\№8.exe

@@ -1,0 +1,6 @@
+first.cpp(43): Error! E473: col(16) function argument(s) do not match those in prototype
+first.cpp(43): Note! N392: col(16) definition: 'double * minArray( double *, double * )'
+first.cpp(43): Note! N643: col(16) cannot convert argument 1 defined in: first.cpp(43) (col 18)
+first.cpp(43): Note! N630: col(16) source conversion type is 'double (lvalue)'
+first.cpp(43): Note! N631: col(16) target conversion type is 'double *'
+first.cpp(44): Warning! W628: col(3) expression is not meaningful

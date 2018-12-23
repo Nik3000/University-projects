@@ -1,0 +1,4 @@
+﻿  decision_tree_id3.cpp
+c:\users\dulce\source\repos\decision_tree_id3\decision_tree_id3\decision_tree_id3.cpp(35): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\dulce\source\repos\decision_tree_id3\decision_tree_id3\decision_tree_id3.cpp(210): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  decision_tree_id3.vcxproj -> C:\Users\dulce\source\repos\decision_tree_id3\Debug\decision_tree_id3.exe

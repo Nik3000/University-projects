@@ -1,0 +1,7 @@
+FIRST_EL 1
+
+STEP 1
+
+ARRAY# 59 = 100
+
+ARRAY# 987 = 200

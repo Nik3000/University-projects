@@ -1,0 +1,31 @@
+!define BLANK ""
+D:\YandexDisk\Prog_for_Windows\Matrix\main.obj : D:\YandexDisk\Prog_for_Wind&
+ows\Matrix\main.cpp .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\Matrix
+ *wpp386 main.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -6r -&
+bt=nt -fo=.obj -mf -xs -xr
+
+D:\YandexDisk\Prog_for_Windows\Matrix\Matrix.obj : D:\YandexDisk\Prog_for_Wi&
+ndows\Matrix\Matrix.cpp .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\Matrix
+ *wpp386 Matrix.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -6r&
+ -bt=nt -fo=.obj -mf -xs -xr
+
+D:\YandexDisk\Prog_for_Windows\Matrix\Matrix.exe : D:\YandexDisk\Prog_for_Wi&
+ndows\Matrix\main.obj D:\YandexDisk\Prog_for_Windows\Matrix\Matrix.obj D:\Ya&
+ndexDisk\Prog_for_Windows\Matrix\Matrix.hpp .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\Matrix
+ @%write Matrix.lk1 FIL main.obj,Matrix.obj
+ @%append Matrix.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Matrix.imp 
+ @%append Matrix.lk1 LIBR Matrix.imp
+!endif
+!ifneq BLANK ""
+ @%append Matrix.lk1 
+!endif
+ *wlink name Matrix d all sys nt op m op maxe=25 op q op symf @Matrix.lk1
+

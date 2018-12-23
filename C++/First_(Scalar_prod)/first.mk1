@@ -1,0 +1,23 @@
+!define BLANK ""
+"D:\YandexDisk\Prog for Windows\First (Scalar prod)\first.obj" : "D:\YandexD&
+isk\Prog for Windows\First (Scalar prod)\first.cpp" .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog for Windows\First (Scalar prod)
+ *wpp386 first.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -6r &
+-bt=nt -fo=.obj -mf -xs -xr
+
+"D:\YandexDisk\Prog for Windows\First (Scalar prod)\first.exe" : "D:\YandexD&
+isk\Prog for Windows\First (Scalar prod)\first.obj" .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog for Windows\First (Scalar prod)
+ @%write first.lk1 FIL first.obj
+ @%append first.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b first.imp 
+ @%append first.lk1 LIBR first.imp
+!endif
+!ifneq BLANK ""
+ @%append first.lk1 
+!endif
+ *wlink name first d all sys nt op m op maxe=25 op q op symf @first.lk1
+

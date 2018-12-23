@@ -1,0 +1,23 @@
+!define BLANK ""
+D:\YandexDisk\Prog_for_Windows\matrixXvect\first.obj : D:\YandexDisk\Prog_fo&
+r_Windows\matrixXvect\first.cpp .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\matrixXvect
+ *wpp386 first.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -od -d2 -6r &
+-bt=nt -fo=.obj -mf -xs -xr
+
+D:\YandexDisk\Prog_for_Windows\matrixXvect\first.exe : D:\YandexDisk\Prog_fo&
+r_Windows\matrixXvect\first.obj .AUTODEPEND
+ @D:
+ cd D:\YandexDisk\Prog_for_Windows\matrixXvect
+ @%write first.lk1 FIL first.obj
+ @%append first.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b first.imp 
+ @%append first.lk1 LIBR first.imp
+!endif
+!ifneq BLANK ""
+ @%append first.lk1 
+!endif
+ *wlink name first d all sys nt op m op maxe=25 op q op symf @first.lk1
+
